@@ -8,8 +8,8 @@ const {
 } = require("../controllers/employeeController");
 const employeeRouter = express.Router();
 
-router.route("/").get(getEmployees).post(addEmployee);
-router
+employeeRouter.route("/").get(getEmployees).post(addEmployee);
+employeeRouter
   .route("/:id")
   .get(getEmployeeByID)
   .delete(deleteEmployee)
